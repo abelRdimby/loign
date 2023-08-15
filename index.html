@@ -9,6 +9,8 @@
 <body>
     <section class="login">
         <form id="form-user-add">
+            <!-- <h2>Nouvel utilisateur</h2> -->
+            <h1>Nouvel utilisateur</h1>
             <label for="firstname">Nom</label><br>
             <input type="text" name="firstname" id="firstname" placeholder="Nom de l'utilisateur"><br>
             <label for="lastname">Prénom</label><br>
@@ -19,14 +21,19 @@
             <textarea name="biographie" id="biographie" placeholder="Biographie de l'utilisateur" cols="30" rows="10"></textarea><br>
             <label for="birthday">Date de naissance</label><br>
             <input type="date" name="birthday" id="birthday"><br>
-            <label for="sex">Sexe</label><br>
-            <select name="sex" id="sex"><br>
-                <option value="man">Man</option>
-                <option value="woman">Woman</option>
-                <option value="not-list">Not list ...</option>
-            </select><br>
-            <input type="submit" value="Annulé">
-            <input type="submit" value="Sauvegarder">
+            <div class="middle">
+                <label for="sex">Sexe</label><br>
+                <select name="sex" id="sex"><br>
+                    <option value="man">Man</option>
+                    <option value="woman">Woman</option>
+                    <option value="not-list">Not list ...</option>
+                </select><br>
+            </div>
+            <div class="middle"></div>
+            <div class="btn-space">
+                <input type="button" value="Annulé" class="form-btn">
+                <input type="submit" value="Sauvegarder" class="form-btn">
+            </div>
         </form>
 
     </section>
