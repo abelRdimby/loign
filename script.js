@@ -16,5 +16,6 @@ form.addEventListener('submit',(e) =>{
         sex: sex.value,
         birthday: birthday.value
     }
+    console.log("Bienvenue "+dataUser.firstname)
     console.log(dataUser)
 });
