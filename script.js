@@ -7,65 +7,73 @@ const biographie = document.getElementById("biographie")
 const sex = document.getElementById("sex")
 const birthday = document.getElementById("birthday")
 
-// function removeClass() {
-//     let champ = document.getElementsByClassName("champ")[0]
-//     champ.removeClass('animation')
-// }
 
-
-
-function notValidAnim(e , alika) {
-    let champ = document.getElementsByClassName(e)[0]
-    champ.classList.toggle('animation')
-    var input = document.getElementsByName(alika)[0]
+function notValidAnim(className , inputId ,message) {
+    let Inputparent = document.getElementsByClassName(className)[0]
+    Inputparent.classList.toggle('animation')
+       
+    var input = document.getElementsByName(inputId)[0]
+    input.setAttribute('placeholder', message)
+    input.style.border = "red 1px solid"
     input.classList.add('invalid-input')
+    Inputparent.style.transition="0.9s all"
     setTimeout(() =>{
-        champ.classList.remove('animation')
+        Inputparent.classList.remove('animation');
         input.classList.remove('invalid-input')
-    }, "2000")
+        input.style.border = "rgb(211, 211, 211) 1px solid"
+        var inputSelect = document.getElementById("sex")
+        inputSelect.style.border = "rgb(211, 211, 211) 1px solid"
+    }, "1500")
 }
 form.addEventListener('submit',(e) =>{
     e.preventDefault()
+
     if(firstname.value === "") {
         // alert('Le champ prénom est obligatoir?')
-        notValidAnim('firstnameWraper', "firstname")
+        notValidAnim('firstnameWraper', "firstname", "Le prénom est obligatoir")
         return;
     }
     
     if(lastname.value ==="") {
         // alert("Le champ nom est obligatoir")
-        notValidAnim('lastnameWraper',"lastname")
+        notValidAnim('lastnameWraper',"lastname","Le nom est obligatoir")
         return;
     }
+
     if(email.value ==="") {
         // alert("L'email est obligatoir")
-        notValidAnim("emailWraper","email")
+        notValidAnim("emailWraper","email","Votre addresse email est très important")
         return;
     }
+
     if(biographie.value ==="") {
         // alert("On a besoin de votre biographie")
-        notValidAnim("bioWraper","biographie")
+        notValidAnim("bioWraper","biographie", "Le biographie est aussi obligatoir")
         return;
     }
+
     if(birthday.value ==="") {
         // alert("Veuillez entré votre date naissance")
-        notValidAnim("birthWraper","biographie")
+        notValidAnim("birthWraper","birthday")
         return;
     }
+
     if(sex.value ==="none") {
         // alert("Veuillez entré votre date naissance")
+        var inputSelect = document.getElementById("sex")
+        inputSelect.style.border = "red 1px solid"
         notValidAnim("sexWraper","sex")
         return;
     }
-let dataUser = {
-    firstname: firstname.value,
-    lastname: lastname.value,
-    email: email.value,
-    biographie: biographie.value,
-    sex: sex.value,
-    birthday: birthday.value
-}
-    console.log(dataUser)
+    let dataUser = {
+        firstname: firstname.value,
+        lastname: lastname.value,
+        email: email.value,
+        biographie: biographie.value,
+        sex: sex.value,
+        birthday: birthday.value
+    }
+        console.log(dataUser)
     
 
 });
