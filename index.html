@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT-GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <!-- CSS Global -->
     <link rel="stylesheet" href="style.css">
     <title>formulaire</title>
 </head>
 <body>
     <section class="login">
         <form id="form-user-add">
-            <!-- <h2>Nouvel utilisateur</h2> -->
-            <h1>Nouvel utilisateur</h1>
+            <h2>Nouvel utilisateur</h2>
+            <!-- <h1>Nouvel utilisateur</h1> -->
             <label for="firstname">Nom</label><br>
             <input type="text" name="firstname" id="firstname" placeholder="Nom de l'utilisateur"><br>
             <label for="lastname">Prénom</label><br>
@@ -19,9 +24,9 @@
             <input type="email" name="email" id="email" placeholder="Adresse email de l'utilisateur"><br>
             <label for="biographie">Biographie</label><br>
             <textarea name="biographie" id="biographie" placeholder="Biographie de l'utilisateur" cols="30" rows="10"></textarea><br>
-            <label for="birthday">Date de naissance</label><br>
-            <input type="date" name="birthday" id="birthday"><br>
             <div class="middle">
+                <label for="birthday">Date de naissance</label><br>
+                <input type="date" name="birthday" id="birthday"><br>
                 <label for="sex">Sexe</label><br>
                 <select name="sex" id="sex"><br>
                     <option value="man">Man</option>
