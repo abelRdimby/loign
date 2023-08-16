@@ -25,6 +25,7 @@ function notValidAnim(className , inputId ,message) {
         inputSelect.style.border = "rgb(211, 211, 211) 1px solid"
     }, "1500")
 }
+
 form.addEventListener('submit',(e) =>{
     e.preventDefault()
 
@@ -65,6 +66,7 @@ form.addEventListener('submit',(e) =>{
         notValidAnim("sexWraper","sex")
         return;
     }
+
     let dataUser = {
         firstname: firstname.value,
         lastname: lastname.value,
