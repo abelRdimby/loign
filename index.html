@@ -16,9 +16,9 @@
         <form id="form-user-add">
             <h2>Nouvel utilisateur</h2>
             <!-- <h1>Nouvel utilisateur</h1> -->
-            <label for="firstname">Nom</label><br>
+            <label for="firstname">Prénom</label><br>
             <input type="text" name="firstname" id="firstname" placeholder="Nom de l'utilisateur"><br>
-            <label for="lastname">Prénom</label><br>
+            <label for="lastname">Nom</label><br>
             <input type="text" name="lastname" id="lastname" placeholder="Prénom de l'utilisateur"><br>
             <label for="email">Adresse email</label><br>
             <input type="email" name="email" id="email" placeholder="Adresse email de l'utilisateur"><br>
@@ -29,9 +29,9 @@
                 <input type="date" name="birthday" id="birthday"><br>
                 <label for="sex">Sexe</label><br>
                 <select name="sex" id="sex"><br>
+                    <option value="none" selected disabled hidden>Are you?</option>
                     <option value="man">Man</option>
                     <option value="woman">Woman</option>
-                    <option value="not-list">Not list ...</option>
                 </select><br>
             </div>
             <div class="middle"></div>
