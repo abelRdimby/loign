@@ -1,8 +1,15 @@
+:root {
+    --color-black:rgb(26, 26, 26) ;
+    --color-grey: rgb(201, 199, 199);
+    --color-red: rgb(255, 1, 77);
+}
+
 body{
     width: 100%;
-    height: 790px;
+    /* height: 790px; */
     /* overflow: hidden; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-items: center;
@@ -25,12 +32,14 @@ h1{
 }
 .login{
     width: 550px;
-    border: 1px solid rgb(201, 199, 199);
+    border: 1px solid var(--color-grey);
     border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.8s all;
+    margin-block: 30px;
+
 }
 form {
     width: 100%;
@@ -39,12 +48,13 @@ form {
 }
 
 .invalid-input::placeholder {
-    color: red; /* Couleur en cas de validation invalide */
+    color: var(--color-red); /* Couleur en cas de validation invalide */
   }
 .middle{
     width: 50%;
     height: 100%;
     transition: 0.8s all;
+    /* background-color: blue; */
 }
 .middle input{
     width: 95%;
@@ -53,17 +63,18 @@ select {
     width: 100%;
     height: 25px;
     border-radius: 3px;
+    border: 1px var(--color-grey) solid;
 }
-form input,textarea{
+input,textarea{
     padding: 5px;
-    /* margin-block-end: 0px; */
-    width: 97.5%;
     border-radius: 5px;
-    border: 1px solid rgb(211, 211, 211);
+    border: 1px solid var(--color-grey);
     display: flex;
+    transition: 0.8s all;
 }
-form input{
-    color: rgb(26, 26, 26);
+#firstname,#lastname,#email,#biographie{
+    color: var(--color-black);
+    width: 97.5%;
 }
 
 .animation{
@@ -91,15 +102,55 @@ form input{
         transform: translateX(0);
     }
 }
+
 .btn-space {
+    /* background-color: aqua; */
     width: 100%;
     height: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 .form-btn {
-    width: 110px;
-    margin: auto;
+margin: auto;
+text-align: center;
+padding: 7px 13px ;
+max-width: 55%;
+width: 140px;
+cursor: pointer;
+}
+
+.userSection{
+    width: 550px;
+    border: 1px solid var(--color-grey);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s all;
+    margin-block: 0px 30px;
+}
+table{
+    margin-block: 30px;
+    width: 95%;
+    text-align: left;
+    border-spacing: 5px;
+}
+table tbody{
+    font-size: 12px;
+    position: relative;
+}
+table>colgroup>col{
+    border: 1px var(--color-black) solid;
+}
+.btnUserEdit{
+    position: absolute;
+    right: 0;
+    transform: translateY(-39px);
+    z-index: 100;
+}
+.btnUserEdit svg{
+    cursor: pointer;
+    color: var(--color-black);
+    width: 15px;
 }
